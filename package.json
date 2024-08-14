@@ -1,6 +1,6 @@
 {
   "name": "vue-print-last",
-  "version": "1.0.4",
+  "version": "1.0.1",
   "author": "zhangkun <1334132303@qq.com> (https://github.com/Huo-zai-feng-lang-li)",
   "license": "MIT",
   "type": "module",
@@ -14,7 +14,7 @@
   "description": "This is a directive wrapper for printed, Simple, fast, convenient, light.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Huo-zai-feng-lang-li/vue-print-last"
+    "url": "git+https://github.com/Huo-zai-feng-lang-li/vue-print-last.git"
   },
   "homepage": "https://github.com/Huo-zai-feng-lang-li/vue-print-last#readme",
   "bugs": "https://github.com/Huo-zai-feng-lang-li/vue-print-last/issues",

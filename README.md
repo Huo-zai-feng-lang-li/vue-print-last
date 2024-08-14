@@ -337,3 +337,8 @@ body {
 ---
 
 欢迎在 [GitHub Issues](https://github.com/Huo-zai-feng-lang-li/vue-print-last/issues) 上讨论并提出问题或提交 Pull Request！
+> npm在发布时自动修正了你的package.json中的一些错误。
+```bash
+npm pkg fix
+```
+这将帮助确保你的package.json文件符合npm的要求，避免在未来发布时出现类似的警告。

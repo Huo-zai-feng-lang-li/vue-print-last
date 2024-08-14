@@ -2,3 +2,12 @@ pnpm-lock.yaml
 .husky/
 *.lock
 *.gif
+demos
+public
+src
+.gitignore
+index.html
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
