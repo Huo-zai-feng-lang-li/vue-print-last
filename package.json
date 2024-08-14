@@ -11,7 +11,7 @@
     "vue-print-nb",
     "vue3-print-nb"
   ],
-  "description": "This is a directive wrapper for printed, Simple, fast, convenient, light.",
+  "description": "Vue 打印插件，简单、快速、方便、轻巧，支持 Vue 2 和 Vue 3。This is a directive wrapper for printed, Simple, fast, convenient, light.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Huo-zai-feng-lang-li/vue-print-last.git"
