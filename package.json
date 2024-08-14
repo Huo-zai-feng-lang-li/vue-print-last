@@ -1,0 +1,56 @@
+{
+  "name": "vue-print-last",
+  "version": "1.0.4",
+  "author": "zhangkun <1334132303@qq.com> (https://github.com/Alessandro-Pang)",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "vue-print",
+    "vue3-print",
+    "print",
+    "vue-print-nb",
+    "vue3-print-nb"
+  ],
+  "description": "This is a directive wrapper for printed, Simple, fast, convenient, light.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alessandro-Pang/vue-print-last"
+  },
+  "homepage": "https://github.com/Alessandro-Pang/vue-print-last#readme",
+  "bugs": "https://github.com/Alessandro-Pang/vue-print-last/issues",
+  "types": "types/index.d.ts",
+  "files": [
+    "types",
+    "dist"
+  ],
+  "main": "./dist/vue-print-last.umd.cjs",
+  "module": "./dist/vue-print-last.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./types/index.d.ts",
+        "default": "./dist/vue-print-last.js"
+      },
+      "require": {
+        "types": "./types/index.d.ts",
+        "default": "./dist/vue-print-last.umd.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "dev": "vite --open",
+    "install:open": "pnpm install &&  npm run dev",
+    "build": "vue-tsc -b && vite build"
+  },
+  "packageManager": "^pnpm@7.0.0",
+  "dependencies": {
+    "vue": "^3.4.30"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.8",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "typescript": "^5.5.2",
+    "vite": "^5.3.1",
+    "vue-tsc": "^2.0.22"
+  }
+}
