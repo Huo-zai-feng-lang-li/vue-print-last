@@ -101,10 +101,10 @@ export default {
 
 ```vue
 <script setup>
-import { VuePrintlast } from "vue-print-last";
+import { VuePrintLast } from "vue-print-last";
 
 function handlePrint() {
-  new VuePrintlast({ el: "#printMe" /** 其他参数 */ });
+  new VuePrintLast({ el: "#printMe" /** 其他参数 */ });
 }
 </script>
 
@@ -125,7 +125,7 @@ function handlePrint() {
 - **全屏打印**：`<button v-print>打印整个页面</button>`
 - **局部打印**：`<button v-print="'#printMe'">打印局部内容</button>`，其中 `#printMe` 是需要打印的 DOM 元素选择器。
 
-### `VuePrintlast` 类
+### `VuePrintLast` 类
 
 用于手动调用打印功能。
 
@@ -176,10 +176,10 @@ function handlePrint() {
 ```vue
 <script setup lang="ts">
 import { ref, type Ref } from "vue";
-import { VuePrintlast } from "vue-print-last";
+import { VuePrintLast } from "vue-print-last";
 function handlePrint() {
   const printEle = ref(null) as Ref<HTMLElement>;
-  new VuePrintlast({ el: printEle });
+  new VuePrintLast({ el: printEle });
 }
 </script>
 
@@ -273,6 +273,7 @@ const printObj = {
 
 <script setup>
 const printObj = {
+  preview: true,
   asyncUrl(resolve) {
     setTimeout(() => {
       resolve("https://example.com/print-content");
