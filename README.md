@@ -335,4 +335,4 @@ body {
 
 ---
 
-欢迎在 [GitHub Issues](https://github.com/Alessandro-Pang/vue-print-last/issues) 上讨论并提出问题或提交 Pull Request！
+欢迎在 [GitHub Issues](https://github.com/Huo-zai-feng-lang-li/vue-print-last/issues) 上讨论并提出问题或提交 Pull Request！
