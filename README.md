@@ -1,6 +1,6 @@
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <h1>感谢</h1>
-  <h1>开源</h1>
+  <h1 style='float:right;'>感谢</h1>
+  <h1 style='float:left;'>开源</h1>
 </div>
 
 <p align="center">
