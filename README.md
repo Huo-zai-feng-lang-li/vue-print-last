@@ -1,8 +1,3 @@
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <h1 style='float:right;'>感谢</h1>
-  <h1 style='float:left;'>开源</h1>
-</div>
-
 <p align="center">
   <a target="_blank" href="https://github.com/Huo-zai-feng-lang-li/vue-print-last">
   <img alt="logo" src="./logo.gif" width="300">
