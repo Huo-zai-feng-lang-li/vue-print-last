@@ -1,6 +1,7 @@
 <p align="center">
   <a target="_blank" href="https://github.com/Huo-zai-feng-lang-li/vue-print-last">
-  <img alt="logo" src="./logo.gif" width="300">
+  <!-- <img alt="logo" src="./logo.gif" width="300"> -->
+     <img alt="logo" src="https://github.com/Huo-zai-feng-lang-li/vue-print-last/raw/main/logo.gif" width="300">
   </a>
 </p>
 
