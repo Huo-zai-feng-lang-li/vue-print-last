@@ -141,6 +141,7 @@ function handlePrint() {
 | `previewPrintBtnLabel` | `string` | 预览窗口中的打印按钮标签 | '打印' |
 | `extraCss` | `string` | 额外的 CSS 文件路径（不建议使用"../"相对路径） | - |
 | `customSize` | `object` | 传递纸张自定义尺寸 | { width: "280mm", height: "297mm" } |
+| `watermark` | `string` | 水印文字,非空字符串就会显示 | 不显示 |
 | `extraHead` | `string` | 额外的 `<head>` 内容 | - |
 | `url` | `string` | 打印指定的网址内容 | - |
 | `asyncUrl` | `function` | 异步加载 URL 内容的方法 | - |

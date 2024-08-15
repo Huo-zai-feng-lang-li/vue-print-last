@@ -19,7 +19,7 @@
   </div>
   <button v-print="printSetting" style="margin-right: 10px;">指令打印</button>
   <button @click="handlePrint">方法打印</button>
-  <div v-show="pringLoading"> loading....</div>
+  <div v-show="pringLoading" style="position: fixed;top: 30px;left: 50px;"> loading....</div>
 </template>
 
 <script setup lang="ts">

@@ -25,6 +25,7 @@ export interface PrintAreaOption {
   previewPrintBtnLabel?: string;
   // 预览窗口的 z-index
   zIndex?: number;
+
   // 预览窗口打开之前的 callback
   previewBeforeOpenCallback?: (vue?: any) => void;
   // 预览窗口打开之后的 callback
@@ -38,7 +39,9 @@ export interface PrintAreaOption {
   // vue 实例，使用指令时自动获取，当使用方法调用时需手动传入
   vue?: any;
   //   添加自定义宽高的属性：
-  customSize?: { width: string; height: string };
+  customSize?: { width: string; height: string }; 
+  // 是否启动水印 string
+  watermark?: string;
 }
 
 export interface PrintAreaWindow {

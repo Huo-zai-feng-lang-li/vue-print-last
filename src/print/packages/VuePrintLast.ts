@@ -27,7 +27,9 @@ export default class VuePrintLast {
     previewPrintBtnLabel: "打印",
     preview: false,
     // 自定义纸张大小-默认A4
-    customSize: { width: "280mm", height: "297mm" }
+    customSize: { width: "280mm", height: "297mm" },
+    // 水印文字-默认空，不显示
+    watermark: ""
   } as PrintAreaOption;
 
   constructor(option: PrintAreaOption) {
@@ -268,6 +270,27 @@ export default class VuePrintLast {
       this.formDataHandler(item, copy);
       copyPrintAreaDom.appendChild(copy);
     });
+
+    // 添加水印
+    if (this.settings.watermark !== "") {
+      const watermarkContainer = document.createElement("div");
+      watermarkContainer.style.cssText =
+        "position: fixed; top: 85px; left: 30px; width: 100%; height: 100%; pointer-events: none; z-index: 9999;";
+
+      for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+          const watermarkDiv = document.createElement("div");
+          watermarkDiv.style.cssText =
+            "position: absolute; color: rgba(0, 0, 0, 0.1); transform: rotate(-30deg); font-size: 2em;";
+          watermarkDiv.style.top = `${i * 40}%`;
+          watermarkDiv.style.left = `${j * 40}%`;
+          watermarkDiv.textContent = this.settings.watermark ?? "";
+          watermarkContainer.appendChild(watermarkDiv);
+        }
+      }
+      copyPrintAreaDom.appendChild(watermarkContainer);
+    }
+
     return `<body>${copyPrintAreaDom.innerHTML}</body>`;
   }
 
