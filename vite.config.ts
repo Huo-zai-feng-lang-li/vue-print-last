@@ -14,6 +14,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(dirname, "src/print/index.ts"),
       formats: ["es", "umd"],
+      // 例如通过 <script> 标签直接在浏览器中使用的模块名称，可以使用全局变量 VuePrintLast
       name: "VuePrintLast"
     },
     rollupOptions: {
