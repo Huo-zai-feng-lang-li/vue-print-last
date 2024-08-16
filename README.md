@@ -11,6 +11,7 @@
 </p>
 
 - Vue 打印插件，简单、快速、方便、轻巧，支持 Vue 2 和 Vue 3。
+- 建议下载发行最新版本
   > 本插件基于 [vue3-print-nb](https://github.com/Power-kxLee/vue3-print-nb) 开发，并使用 TypeScript 完全重写，以更好地支持 Vue 3 的 setup 函数。
 
 ## 特性
