@@ -12,15 +12,19 @@
 </p>
 
 - Vue 打印插件，简单、快速、方便、轻巧，支持 Vue 2 和 Vue 3。
-- 建议下载发行最新版本
+- 环境支持：浏览器端、Node.js 环境。esm、cjs、umd、iife 格式。
+- 建议您下载发行的最新版本以获得更加完整丰富插件功能生态。
+
   > 本插件基于 [vue3-print-nb](https://github.com/Power-kxLee/vue3-print-nb) 开发，并使用 TypeScript 完全重写，以更好地支持 Vue 3 的 setup 函数。
 
 ## 特性
 
 - 支持指令调用和手动调用 `VuePrintLast` 方法进行打印。
+- 支持完整生命函数周期链条，参见下方 APi 详解。
 - 更好地支持 Vue 3 的 setup 函数。
+- 支持异步 url 打印。
 - 支持全局和局部内容打印，以及打印预览功能。
-- 支持设置指定 class 样式的元素忽略打印
+- 支持设置指定 class 样式的元素忽略打印，额外 css 路径。
 - 支持通过 css 选择器、手动传入 Dom 节点进行局部打印。
 
 ## 安装
@@ -71,7 +75,7 @@ import { vPrint } from "vue-print-last";
 </template>
 ```
 
-### 2. Vue2 在组件中使用指令
+### 3. Vue2 在组件中使用指令
 
 ```vue
 <script>
@@ -118,6 +122,53 @@ function handlePrint() {
     </div>
   </div>
 </template>
+```
+
+### 5. 浏览器 html 格式使用
+
+> 现代浏览器支持通过`<script type="module">`加载 ESM 格式的脚本。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>浏览器环境 Vue Print Last Example</title>
+  </head>
+
+  <body>
+    <div id="printMe">
+      <h1>这是需要打印的内容</h1>
+      <p>Vue Print Last 插件示例</p>
+    </div>
+
+    <!-- <button onclick="handlePrint()">打印内容</button> -->
+    <button id="printButton">打印内容</button>
+    <script type="module">
+      import * as vuePrintLast from "https://cdn.jsdelivr.net/npm/vue-print-last@1.0.6/+esm";
+
+      function handlePrint() {
+        const printer = new vuePrintLast.VuePrintLast({
+          el: "#printMe",
+          watermark: "html模板插件使用方式"
+        });
+        printer.print(); // 执行打印操作
+      }
+      /**
+       * ES 模块 <script> 标签内部，这使得它在全局作用域中不可见，因此无法通过 onclick 属性直接访问 handlePrint 函数。
+       * 解决这个问题，你可以将 handlePrint 函数添加到全局作用域中，或者使用事件监听方法来调用它。
+       */
+      // window.handlePrint = handlePrint;
+      document
+        .getElementById("printButton")
+        .addEventListener("click", handlePrint);
+    </script>
+  </body>
+</html>
 ```
 
 ## API 详解
@@ -341,8 +392,11 @@ body {
 ---
 
 欢迎在 [GitHub Issues](https://github.com/Huo-zai-feng-lang-li/vue-print-last/issues) 上讨论并提出问题或提交 Pull Request！
-> npm在发布时自动修正了你的package.json中的一些错误。
+
+> npm 在发布时自动修正了你的 package.json 中的一些错误。
+
 ```bash
 npm pkg fix
 ```
-这将帮助确保你的package.json文件符合npm的要求，避免在未来发布时出现类似的警告。
+
+这将帮助确保你的 package.json 文件符合 npm 的要求，避免在未来发布时出现类似的警告。
